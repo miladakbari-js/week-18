@@ -1,0 +1,34 @@
+.search{
+    width: 500px;
+    height: fit-content;
+    display: flex;
+    align-items:end;
+}
+.search input{
+    width: 300px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid  #fff;
+    padding: 10px;
+    font-size: 1rem;
+}
+.search input::placeholder {
+    color:  rgb(163, 192, 223);
+}
+.search input:focus{
+    outline: none;
+}
+.searchButton{
+    position: relative;
+   background: transparent;
+   border: none;
+   width: fit-content;
+   height: fit-content;
+   padding: 0;
+   margin: 0;
+   font-size: 1.1rem;
+}
+.searchButton:hover{
+    background: transparent;
+    color:  rgb(163, 192, 223);
+}

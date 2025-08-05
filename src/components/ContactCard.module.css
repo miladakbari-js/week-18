@@ -1,0 +1,76 @@
+.header {
+  width: 100%;
+  height: 30px;
+  background-color: rgb(38, 38, 141);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.header h3 {
+  padding: 0 5px;
+}
+.card {
+  width: 1100px;
+  height: 80px;
+  margin-bottom: 40px;
+}
+.cardinfo {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(120, 131, 143);
+  align-items: center;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.info {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  padding: 10px;
+}
+.info span {
+  margin-left: 5px;
+}
+.info svg {
+  font-size: 1.5rem;
+}
+.email {
+  display: flex;
+  flex-grow: 3;
+}
+.job {
+  display: flex;
+  flex-grow: 2;
+}
+.name .birthday .gender .phone .job {
+  display: flex;
+  flex-grow: 1;
+}
+.cardAction {
+  display: flex;
+  gap: 10px;
+}
+button {
+  width: 50px;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  transition: all ease-in 0.1s;
+}
+.editButton {
+  background-color: rgb(255, 227, 135);
+  color: rgb(133, 103, 6);
+}
+.deleteButton {
+  background-color: rgb(255, 188, 188);
+  color: rgb(226, 41, 41);
+}
+button:hover {
+  background-color: rgb(221, 221, 221);
+  color: rgb(124, 129, 129);
+  transform: scale(1.1);
+}

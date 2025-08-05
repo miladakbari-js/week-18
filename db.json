@@ -1,0 +1,34 @@
+{
+  "contacts": [
+    {
+      "id": "d381",
+      "name": "Milad",
+      "lastName": "Akbari",
+      "email": "milad.akbari.codevelop@gmail.com",
+      "job": "developer",
+      "phone": "09116218093",
+      "birthday": "2025-08-14",
+      "gender": "male"
+    },
+    {
+      "id": "b0e8",
+      "name": "Mahdi",
+      "lastName": "imani",
+      "email": "mahdi.imani6925@gmail.com",
+      "job": "SEO",
+      "phone": "09116218093",
+      "birthday": "2025-08-15",
+      "gender": "male"
+    },
+    {
+      "id": "2982",
+      "name": "Mahdi",
+      "lastName": "imani",
+      "email": "mahdi.imani6925@gmail.com",
+      "job": "SEO",
+      "phone": "09116218093",
+      "birthday": "2025-08-12",
+      "gender": "male"
+    }
+  ]
+}

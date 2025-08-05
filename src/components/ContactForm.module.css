@@ -1,0 +1,54 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+}
+
+.container input{
+    width: 450px;
+    height: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+}
+.container input:focus{
+    outline: none;
+}
+.container input::placeholder , input[type="date"]{
+    color:  rgb(163, 192, 223);
+}
+
+.container select{
+    width: 250px;
+    height: 40px;
+    background: #666666;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color:  rgb(163, 192, 223);
+}
+.container select:focus{
+    outline: none;
+}
+.registerButton{
+    width: 250px;
+    height: 40px;
+    background-color: rgb(163, 192, 223);
+    color: rgb(21, 74, 131);
+    font-size: 1.1rem;
+    transition: all 0.2s ease-in-out;
+}
+.registerButton:hover{
+     background-color: rgb(21, 74, 131);
+    color: rgb(163, 192, 223);
+    transform: scale(1);
+}
+.error{
+    height: 40px;
+    width:450px;
+}
+.error p{
+    margin: 0;
+    color:  rgb(255, 188, 188);
+}

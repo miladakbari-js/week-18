@@ -1,0 +1,42 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.425);
+  backdrop-filter: blur(2px);
+}
+.container {
+  width: 500px;
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  background-color: #8d8d8d;
+  box-shadow: 4px 4px 15px rgb(194, 194, 194);
+}
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+.buttons button {
+  width: 80px;
+  height: 23px;
+
+  border-radius: 5px;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #4896fd;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
