@@ -1,15 +1,24 @@
-import styles from "./Modal.module.css"
-function Modal({ message, onConfirm, onCancel }) {
+import { useContactContext } from "../context/ContactContext";
+import styles from "./Modal.module.css";
+
+function Modal({ onConfirm, onCancel, message }) {
+  const { state } = useContactContext();
+  const { alertMessage } = state;
+  console.log("Deleting ID:", state.targetId);
   return (
-    <div onClick={onCancel} className={styles.modal}>
-      <div className={styles.container} onClick={(e) => e.stopPropagation()}>
-        <p>{message}</p>
-        {onConfirm && (
+    <div className={styles.wall} onClick={onCancel}>
+      <div className={alertMessage ? styles.alert : styles.container} onClick={(e) => e.stopPropagation()}>
+        <div>
+          <p>{message}</p>
           <div className={styles.buttons}>
-            <button onClick={onConfirm}>Yes</button>
-            <button onClick={onCancel}>Cancel</button>
+            {alertMessage && onConfirm &&  (
+              <>
+                <button onClick={onConfirm}>Yes</button>
+                <button onClick={onCancel}>Cancel</button>
+              </>
+            )}
           </div>
-        )}
+        </div>
       </div>
     </div>
   );

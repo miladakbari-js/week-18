@@ -64,7 +64,7 @@ const contactReducer = (state, action) => {
       return { ...state, alertMessage: null, showModal: false };
 
     case "SET_TARGET_ID":
-      return { ...state, targetId: action.payload };
+     return { ...state, targetId: action.payload };
 
     case "SHOW_ALERT_MODAL":
       return { ...state, showModal: true, alertMessage: action.payload };

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "./SearchBox.module.css"
+import styles from "./SearchBox.module.css";
 import { useContactContext } from "../context/ContactContext";
 
 function SearchBox() {
@@ -13,10 +13,7 @@ function SearchBox() {
 
   const searchHandler = () => {
     if (!search.trim()) {
-      dispatch({
-        type: "SHOW_ALERT_MODAL",
-        payload: "Please enter your search value",
-      });
+      alert("please Enter Search value")
       dispatch({ type: "RESET_CONTACTS" });
       setTimeout(() => {
         dispatch({ type: "HIDE_ALERT_MODAL" });
@@ -43,8 +40,9 @@ function SearchBox() {
         onChange={changeHandler}
       />
       <div>
-
-      <button onClick={searchHandler} className={styles.searchButton}>Search</button>
+        <button onClick={searchHandler} className={styles.searchButton}>
+          Search
+        </button>
       </div>
     </div>
   );

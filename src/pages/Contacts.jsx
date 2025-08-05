@@ -5,6 +5,7 @@ import ContactCard from "../components/ContactCard";
 import style from "./Contacts.module.css";
 import SearchBox from "../components/SearchBox";
 import Modal from "../components/Modal";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 
 function Contacts() {
   const { state, dispatch } = useContactContext();
@@ -19,11 +20,6 @@ function Contacts() {
     });
   };
 
-  const confirmDeleteHandler = async () => {
-    await deleteContact(state.targetId);
-    dispatch({ type: "DELETE_CONTACT", payload: state.targetId });
-    dispatch({ type: "HIDE_ALERT_MODAL" });
-  };
   const editHandler = (contact) => {
     dispatch({ type: "SET_EDITABLE_CONTACT", payload: contact });
     navigate("/register");
@@ -46,18 +42,22 @@ function Contacts() {
           ))}
         </div>
       )}
-      <Link to="/register">Register</Link>
+
       {state.showModal && (
         <Modal
           message={state.alertMessage}
-          onConfirm={() => {
+          onConfirm={async () => {
+            await deleteContact(state.targetId)
             dispatch({ type: "DELETE_CONTACT", payload: state.targetId });
             dispatch({ type: "HIDE_ALERT_MODAL" });
           }}
           onCancel={() => dispatch({ type: "HIDE_ALERT_MODAL" })}
         />
       )}
-    
+      <div className={style.back}>
+        <Link to="/register">Register Form</Link>
+        <FaArrowAltCircleRight />
+      </div>
     </div>
   );
 }
